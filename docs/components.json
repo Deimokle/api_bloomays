@@ -1,0 +1,63 @@
+{
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "responses": {
+      "UnauthorizedError": {
+        "description": "Access token is missing or invalid"
+      }
+    }
+  },
+  "schemas": {
+    "Date": {
+      "type": "string",
+      "format": "date"
+    },
+    "DateWithExample": {
+      "$ref": "#/components/schemas/Date",
+      "description": "datetime",
+      "default": "2000-01-01 00:00:00"
+    },
+    "Login": {
+      "email": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      }
+    },
+    "Admin": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "created_at": {
+          "$ref": "#/components/schemas/DateWithExample"
+        },
+        "updated_at": {
+          "$ref": "#/components/schemas/DateWithExample"
+        }
+      }
+    }
+  }
+}

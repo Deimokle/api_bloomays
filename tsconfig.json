@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "./build",
+    "baseUrl": "./",
+    "paths": {
+      "#docs/*": ["docs/*"],
+      "#app/*": ["src/app/*"],
+      "#controllers/*": ["src/controllers/*"],
+      "#models/*": ["src/models/*"],
+      "#repositories/*": ["src/repositories/*"],
+      "#routes/*": ["src/routes/*"],
+      "#use-cases/*": ["src/use-cases/*"],
+      "#utils/*": ["src/utils/*"]
+    },
+    "resolveJsonModule": true
+  },
+  "lib": ["es2015"]
+}
