@@ -10,7 +10,7 @@ const prefixName = '/missions'
 /**
  * @openapi
  * /v1/missions/:
- *   post:
+ *   get:
  *     tags:
  *       - Mission
  *     description: Get missions
@@ -24,6 +24,6 @@ const prefixName = '/missions'
  *       200:
  *         description: Return missions from start_date (default is now)
  */
-router.route('/').post(processRouteJson(getMissions))
+router.route('/').get(processRouteJson(getMissions))
 
 export default prefixRouter.use(prefixName, router)
